@@ -25,8 +25,8 @@ To prevent the agent from simply memorizing a static speed, the leader vehicle a
 
 The agent's reward is calculated primarily based on the Time Headway error and a Jerk penalty. 
 
-$$Time\_Headway = \frac{Distance}{v_f + 1e-5}$$
-$$Error = |Time\_Headway - 1.5|$$
+$$TimeHeadway = \frac{Distance}{v_f + 1e-5}$$
+$$Error = |TimeHeadway - 1.5|$$
 $$Jerk = |a_t - a_{t-1}|$$
 
 **Overcoming the RL "Cliff Problem":**
