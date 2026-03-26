@@ -44,5 +44,7 @@ To run this environment, you will need the following Python libraries:
 * `stable-baselines3`
 * `numpy`
 
-## 📊 Results
+## 📊 Results and Terminal
 After 500,000 timesteps of training, the agent successfully converges. It learns to smoothly modulate its acceleration, maintaining a ~1.5s headway and prioritizing collision avoidance over passenger comfort only when absolutely necessary (e.g., when the leader vehicle initiates a hard brake).
+
+<img width="1043" height="315" alt="image" src="https://github.com/user-attachments/assets/339ae35c-ca69-44c4-bb5b-933ecd9ebd77" />
