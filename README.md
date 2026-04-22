@@ -44,3 +44,6 @@ After 500,000 timesteps of training, the agent successfully converges. It learns
 
 A Matplotlib telemetry dashboard is included in the testing loop to visually prove the physics engine and safety metrics. As shown in the safety subplots, the agent successfully keeps the TTC well above dangerous thresholds even during closure events.
 
+<img width="975" height="611" alt="image" src="https://github.com/user-attachments/assets/82d01df4-6ee8-448f-bfc7-01dbfae4da32" />
+
+<img width="975" height="458" alt="image" src="https://github.com/user-attachments/assets/32befee7-a24c-4922-99b7-fe1f5d43c2d8" />
