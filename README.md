@@ -22,7 +22,7 @@ The action space is a continuous 1D array representing the follower's accelerati
 
 **Real-World Leader Behavior:** Instead of basic random uniform speed changes, the leader vehicle uses telemetry from the NGSIM I-80 dataset. The agent must adapt to the erratic, unpredictable speed changes of actual human drivers.
 
-## 🧮 Reward Function & The "Cliff Problem"
+## 🧮 Reward Function 
 
 The agent's reward is calculated primarily based on the Time Headway error and a Jerk penalty.
 * Time Headway = Distance / (v_f + 1e-5)
@@ -44,4 +44,3 @@ After 500,000 timesteps of training, the agent successfully converges. It learns
 
 A Matplotlib telemetry dashboard is included in the testing loop to visually prove the physics engine and safety metrics. As shown in the safety subplots, the agent successfully keeps the TTC well above dangerous thresholds even during closure events.
 
-![Safety Metrics](Safety_Metrics_Graph.png)
