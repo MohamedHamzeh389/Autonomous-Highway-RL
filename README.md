@@ -29,12 +29,6 @@ The agent's reward is calculated primarily based on the Time Headway error and a
 * Error = |Time Headway - 1.5|
 * Jerk = |a_t - a_{t-1}|
 
-**Overcoming the RL "Cliff Problem":** During early training phases, the agent exhibited a classic RL phenomenon: it preferred a "comfortable crash" over evasive braking because the Jerk penalty heavily discouraged slamming the brakes. The agent was receiving high rewards for maintaining a good headway right up until the millisecond it crashed.
-
-**The Solution & Safety Metrics:**
-1.  Implemented a strict −100 terminal crash penalty.
-2.  Scaled the training to **500,000 timesteps**, allowing the PPO algorithm to look past the immediate Jerk penalty and learn true evasive braking.
-3.  Shifted evaluation to track strict industry safety metrics: locking Time Headway (THW) to 1.5s and keeping Time to Collision (TTC) strictly above a 2.0-second safety threshold.
 
 ## ⚙️ Dependencies & Installation
 
@@ -46,7 +40,7 @@ To run this environment and view the telemetry dashboards, you will need the fol
 
 ## 📊 Results and Telemetry
 
-After 1,000,000 timesteps of training, the agent successfully converges. It learns to smoothly modulate its acceleration, absorbing the erratic driving of the human leader to prioritize passenger comfort while flawlessly maintaining the ~1.5s headway. 
+After 500,000 timesteps of training, the agent successfully converges. It learns to smoothly modulate its acceleration, absorbing the erratic driving of the human leader to prioritize passenger comfort while flawlessly maintaining the ~1.5s headway. 
 
 A Matplotlib telemetry dashboard is included in the testing loop to visually prove the physics engine and safety metrics. As shown in the safety subplots, the agent successfully keeps the TTC well above dangerous thresholds even during closure events.
 
